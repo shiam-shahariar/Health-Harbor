@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "name": "Sample Patient",
+        "email": "patient@healthharbor.com",
+        "role": "patient",
+        "password": "(will store password_hash() output here)"
+    }
+]
