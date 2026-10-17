@@ -164,3 +164,31 @@ filesystem will not execute its PHP code.
 
 These are shared sample credentials for local testing only. Change the
 passwords before using the application in any environment with real users.
+
+# SAMPLE DATA AND RESETTING THE DATABASE :
+
+The sample data includes five specialties, four user accounts, and one
+completed historical appointment between Karim Ahmed and Dr. Rahman. The
+sample appointment enables patient review testing. Its date is in the
+past, so it is not an available booking slot.
+
+The SQL seed statements use INSERT IGNORE for sample accounts,
+specialties, and the sample appointment. Importing the file again will
+not overwrite changes to existing sample accounts or duplicate those
+seeded records.
+
+To reset local test data, first back up anything you want to keep. In
+phpMyAdmin, drop the healthharbor database and then import
+healthharbor.sql again. Dropping the database permanently deletes its
+accounts, appointments, and other application data.
+
+# SECURITY AND DATA NOTES :
+
+1. Passwords created through registration are stored as password hashes.
+2. Protected pages check the signed-in user's role. Form actions use
+   CSRF tokens and validate submitted values on the server.
+3. The sample accounts use a public, shared password and are intended for
+   local testing only. Do not use these credentials for real accounts.
+4. This project is intended for local demonstration and testing. Review
+   the application and secure the server and database before exposing it
+   to a public network or storing real patient information.
