@@ -65,3 +65,70 @@ page. The application is designed to run locally through XAMPP.
    accept or reject pending appointments, and complete accepted
    appointments. Cancellation and rejection make the slot available again.
 6. Reviews require at least one completed appointment with the doctor.
+
+# PROJECT FILE STRUCTURE :
+
+HealthHarbor/
+|-- README.txt
+|-- healthharbor.sql
+|-- Controller/
+|   |-- AdminController.php
+|   |-- AppointmentController.php
+|   |-- AvailabilityController.php
+|   |-- BookingController.php
+|   |-- LoginValidation.php
+|   |-- NotesController.php
+|   |-- PasswordController.php
+|   |-- ProfileController.php
+|   |-- RegisterValidation.php
+|   |-- ReviewController.php
+|   |-- SearchController.php
+|   |-- SpecialtyController.php
+|   |-- auth.php
+|   `-- csrf.php
+|-- Design/
+|   `-- Style.css
+|-- Javascript/
+|   `-- Script.js
+|-- Model/
+|   |-- README.txt
+|   |-- db.php
+|   `-- users.json
+`-- View/
+    |-- admin_dashboard.php
+    |-- book_appointment.php
+    |-- change_password.php
+    |-- doctor_appointments.php
+    |-- doctor_dashboard.php
+    |-- doctor_reviews.php
+    |-- footer.php
+    |-- index.php
+    |-- login.php
+    |-- logout.php
+    |-- manage_availability.php
+    |-- manage_specialties.php
+    |-- manage_users.php
+    |-- my_appointments.php
+    |-- nav.php
+    |-- patient_dashboard.php
+    |-- profile.php
+    |-- rate_doctor.php
+    |-- register.php
+    |-- search_doctors.php
+    |-- verify_doctors.php
+    |-- view_appointments.php
+    `-- write_notes.php
+
+* Folder and file responsibilities:
+1. View/ contains the public landing page, forms, and role-specific pages.
+2. Controller/ contains form handling, validation, authentication,
+   authorization, appointment actions, and the doctor-search endpoint.
+3. Model/db.php connects to MySQL and contains the application's database
+   operations.
+4. healthharbor.sql creates the database and tables, and inserts sample
+   accounts, specialties, and a completed sample appointment.
+5. Design/Style.css contains the page styling.
+6. Javascript/Script.js contains client-side form checks and AJAX doctor
+   search. PHP performs the server-side checks as well.
+7. Model/users.json is a standalone sample data file. The application
+   stores and reads its account data from the MySQL users table.
