@@ -98,3 +98,69 @@ page. The application is designed to run locally through XAMPP.
 
 If your local MySQL settings are different, update these values in
 Model/db.php before opening the application.
+
+# REQUIREMENTS :
+
+- XAMPP with Apache, MySQL or MariaDB, and PHP.
+- PHP's mysqli extension enabled.
+- A browser with JavaScript enabled for live doctor search and
+  client-side form feedback.
+- The supplied healthharbor.sql file.
+
+# RUNNING WITH XAMPP :
+
+1. Copy the HealthHarbor project folder into XAMPP's htdocs directory.
+   Keep the folder name HealthHarbor.
+
+   Common locations:
+   - Windows: C:\xampp\htdocs\HealthHarbor
+   - macOS: /Applications/XAMPP/xamppfiles/htdocs/HealthHarbor
+   - Linux: /opt/lampp/htdocs/HealthHarbor
+
+2. Open the XAMPP Control Panel (or XAMPP Manager on macOS) and start
+   Apache and MySQL.
+
+3. Open phpMyAdmin at http://localhost/phpmyadmin.
+
+4. Select the Import tab, choose healthharbor.sql from the project folder,
+   and run the import. The SQL file creates the healthharbor database,
+   tables, and sample data.
+
+5. If your MySQL username, password, host, or database name differs from
+   the defaults, update the connection settings in Model/db.php.
+
+6. Open the application at:
+   http://localhost/HealthHarbor/View/index.php
+
+Run the application through Apache. Opening a PHP file directly from the
+filesystem will not execute its PHP code.
+
+# SAMPLE TEST ACCOUNTS :
+
+* Every sample account seeded by healthharbor.sql uses this password:
+ Password: admin123
+
+* Administrator:
+- Email: admin@healthharbor.com
+- Password: admin123
+
+* Approved doctor:
+- Email: rahman@healthharbor.com
+- Password: admin123
+- Specialty: Cardiology
+
+* Doctor awaiting approval:
+- Email: sultana@healthharbor.com
+- Password: admin123
+- Specialty: Neurology
+- Status: Pending. This account cannot sign in until an administrator
+  approves it. Use the administrator account to test doctor approval.
+
+* Patient:
+- Email: karim@mail.com
+- Password: admin123
+- The sample data includes a completed appointment with Dr. Rahman, so
+  this account can also be used to test the review feature.
+
+These are shared sample credentials for local testing only. Change the
+passwords before using the application in any environment with real users.
