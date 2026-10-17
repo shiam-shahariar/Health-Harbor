@@ -109,13 +109,13 @@ Model/db.php before opening the application.
 
 # RUNNING WITH XAMPP :
 
-1. Copy the HealthHarbor project folder into XAMPP's htdocs directory.
-   Keep the folder name HealthHarbor.
+1. Copy the Health-Harbor project folder into XAMPP's htdocs directory.
+   Keep the folder name Health-Harbor.
 
    Common locations:
-   - Windows: C:\xampp\htdocs\HealthHarbor
-   - macOS: /Applications/XAMPP/xamppfiles/htdocs/HealthHarbor
-   - Linux: /opt/lampp/htdocs/HealthHarbor
+   - Windows: C:\xampp\htdocs\Health-Harbor
+   - macOS: /Applications/XAMPP/xamppfiles/htdocs/Health-Harbor
+   - Linux: /opt/lampp/htdocs/Health-Harbor
 
 2. Open the XAMPP Control Panel (or XAMPP Manager on macOS) and start
    Apache and MySQL.
@@ -130,7 +130,7 @@ Model/db.php before opening the application.
    the defaults, update the connection settings in Model/db.php.
 
 6. Open the application at:
-   http://localhost/HealthHarbor/View/index.php
+   http://localhost/Health-Harbor/View/index.php
 
 Run the application through Apache. Opening a PHP file directly from the
 filesystem will not execute its PHP code.
