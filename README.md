@@ -80,3 +80,21 @@ page. The application is designed to run locally through XAMPP.
    search. PHP performs the server-side checks as well.
 7. Model/users.json is a standalone sample data file. The application
    stores and reads its account data from the MySQL users table.
+
+# DATABASE :
+
+* The SQL import creates the healthharbor database with these tables:
+- users          Patient, doctor, and administrator accounts.
+- specialties    Doctor specialty choices maintained by administrators.
+- slots          Doctor availability and whether a slot is booked.
+- appointments   Patient bookings, statuses, and consultation notes.
+- reviews        Patient ratings and written reviews.
+
+* The database connection is configured in Model/db.php:
+- Host: localhost
+- Username: root
+- Password: blank
+- Database: healthharbor
+
+If your local MySQL settings are different, update these values in
+Model/db.php before opening the application.
